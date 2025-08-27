@@ -21,13 +21,4 @@ for _ in range(5):
     }
     print(persona)
 
-# Almacenar datos dentro de una lista
-usuarios = []
-for _ in range(10):
-    usuarios.append({
-        "nombre": fake.name(),
-        "email": fake.email(),
-        "telefono": fake.phone_number()
-    })
 
-print(usuarios)

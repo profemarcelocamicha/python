@@ -9,3 +9,15 @@ fake = Faker('es_ES')
 print(fake.name())       # Genera un nombre completo
 print(fake.email())      # Genera un email
 print(fake.address())    # Genera una dirección
+
+
+# Almacenar datos dentro de una lista
+usuarios = []
+for _ in range(10):
+    usuarios.append({
+        "nombre": fake.name(),
+        "email": fake.email(),
+        "telefono": fake.phone_number()
+    })
+
+print(usuarios)
