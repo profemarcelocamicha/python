@@ -18,13 +18,9 @@ def mostrar_contactos():
         print("⚠️ No hay contactos cargados.\n")
     else:
         print("\n===================== LISTA DE CONTACTOS =======================")
-        # for i, c in enumerate(contactos, start=1):
-        #     print(f"{i}. {c['nombre']} - {c['telefono']} - {c['email']}")
-        # print()
-
-        for c in (contactos):
-            print(c["nombre"], c["telefono"], c["email"])
-        print()        
+        for i, c in enumerate(contactos, start=1):
+           print(f"{i}. {c['nombre']} - {c['telefono']} - {c['email']}")
+        print()
 
 # === PROGRAMA PRINCIPAL ===
 def menu():
