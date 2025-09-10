@@ -13,9 +13,9 @@ def agregar_contacto():
 
 def mostrar_contactos():
     if not contactos:
-        print("⚠️ No hay contactos cargados.\n")
+        print("⚠️  No hay contactos cargados.\n")
     else:
-        print("\n===================== LISTA DE CONTACTOS =======================")
+        print("\n👩👨🧑👧👦🧒== LISTA DE CONTACTOS ==👵👴🧓👩‍🦰👨‍🦰👩‍🦱👨‍🦱")
         for c in (contactos):
             print(c["nombre"], c["telefono"], c["email"])
         print()        
@@ -36,9 +36,9 @@ def menu():
         elif opcion == "2":
             mostrar_contactos()
         elif opcion == "0":
-            print("👋 Saliendo del programa...")
+            print("👋  Saliendo del programa...")
             break
         else:
-            print("⚠️ Opción no válida.\n")
+            print("⚠️  Opción no válida.\n")
 # Ejecutar menú principal
 menu()
