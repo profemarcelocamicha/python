@@ -17,7 +17,10 @@ for _ in range(10):
     usuarios.append({
         "nombre": fake.name(),
         "email": fake.email(),
-        "telefono": fake.phone_number()
+        "telefono": fake.phone_number(),
+        "direccion": fake.address(),
+        "sexo": fake.random_element(elements=('M', 'F')),
+        "edad": fake.random_int(min=0, max=100)        
     })
 
 print(usuarios)

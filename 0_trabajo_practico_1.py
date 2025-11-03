@@ -3,7 +3,7 @@ import random
 from faker import Faker
 
 # Inicializamos Faker
-fake = Faker()
+fake = Faker('es_ES')
 
 # Lista para guardar los contactos
 contactos = []
@@ -39,19 +39,22 @@ def buscar_contacto():
         print("❌ Contacto no encontrado.\n")
 
 def generar_contactos_falsos():
-    cantidad = random.randint(3, 10)
+    cantidad = random.randint(1000, 1200)
     for _ in range(cantidad):
         contacto = {
             "nombre": fake.name(),
+            "apellido": fake.last_name(),            
             "telefono": fake.phone_number(),
-            "email": fake.email()
+            "email": fake.email(),
+            "direccion": fake.address(),
+            "edad": fake.random_int(min=0, max=100)              
         }
         contactos.append(contacto)
     print(f"✅ Se generaron {cantidad} contactos falsos.\n")
 
 def guardar_csv():
     with open("contactos.csv", "w", newline="", encoding="utf-8") as archivo:
-        escritor = csv.DictWriter(archivo, fieldnames=["nombre", "telefono", "email"])
+        escritor = csv.DictWriter(archivo, fieldnames=["nombre", "apellido", "telefono", "email", "direccion", "edad"])
         escritor.writeheader()
         escritor.writerows(contactos)
     print("✅ Contactos guardados en contactos.csv\n")
